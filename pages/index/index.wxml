@@ -1,13 +1,27 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+
+  <view class="header">
+    <view class="headre-content color-blue">今天</view>
+    <view class="headre-content">明天</view>
+    <view class="headre-content color-red">筛选</view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+
+  <block wx:for="{{cars}}" wx:key="index">
+    <navigator class="list-item" url='../car/details?id={{ item.id }}'>
+        <view class='item'>
+          <image class='poster' src='{{item.url}}' mode="widthFix"></image>
+          <view class='meta'>
+            <text class='title'>司机</text>
+            <text class='sub-title'>{{item.carNum}}({{item.name}}{{item.des}})</text>
+            <view class='artists'>
+             <text>已预约时间：</text>
+             <text>{{item.startTime}} - {{item.endTime}}</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+
+  </block>
+
 </view>

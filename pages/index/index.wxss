@@ -1,21 +1,74 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+page{
+  background-color: #F5F5F5
 }
 
-.userinfo-avatar {
+.container{
+  padding: 10px 20px;
+}
+
+.list-item{
+  width: 100%;
+  padding: 10px;
+  border-bottom: 1rpx solid #F5F5F5;
+  background-color: #FFFFFF
+}
+
+.header{
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1rpx solid #F5F5F5;
+  background-color: #FFFFFF
+}
+
+.headre-content{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-blue{
+  color: blue;
+}
+
+.color-red{
+  color: red;
+}
+
+.item {
+  display: flex;
+  padding: 20rpx 40rpx;
+  cursor: pointer
+}
+.item .poster {
   width: 128rpx;
   height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+  margin-right: 20rpx;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.item .meta {
+  flex: 1;
 }
-
-.usermotto {
-  margin-top: 200px;
+.item .meta .title,.item .meta .sub-title {
+  display: block;
+  margin-bottom: 15rpx;
+}
+.item .meta .title {
+  font-size: 32rpx;
+}
+.item .meta .sub-title {
+  font-size: 22rpx;
+  color: #c0c0c0;
+}
+.item .meta .artists {
+  font-size: 26rpx;
+  color: #999;
+}
+.item .rating {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #f74c31;
 }

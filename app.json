@@ -1,13 +1,26 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/user/my",
+    "pages/user/login",
+    "pages/car/details"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "车辆管理",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "车辆",
+        "pagePath": "pages/index/index"
+      },{
+        "text": "我的",
+        "pagePath": "pages/user/my"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
